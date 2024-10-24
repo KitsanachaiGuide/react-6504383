@@ -5,7 +5,7 @@ import MyBar from './MyBar'
 import MyCard from './MyCard'
 
 function App() {
-  const [data, setData] = useState([])
+  axios.get(`http://192.168.56.1:5000/users`)
   useEffect(() => {
     fetch('https://www.melivecode.com/api/attractions')
       .then(res => res.json())
